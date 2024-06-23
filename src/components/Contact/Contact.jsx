@@ -1,42 +1,43 @@
-// import { FaUserAlt } from 'react-icons/fa';
 // import style from './Contact.module.css';
-import { ImPhoneHangUp } from 'react-icons/im';
-import { deleteContact } from '../../redux/contactsSlice';
+import { ImPhone } from 'react-icons/im';
 import { useDispatch } from 'react-redux';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { RiEdit2Fill } from 'react-icons/ri';
-import { FaUser } from 'react-icons/fa';
+import { FaRegCircleUser } from 'react-icons/fa6';
+import { deleteContact } from '../../redux/contactsOps';
 
-const Contact = ({ data: { id, name, number } }) => {
+const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   const onDelete = () => {
-    dispatch(deleteContact(id));
+    dispatch(deleteContact(contact.id));
   };
   return (
-    <div>
+    <>
       <div>
-        <h2>
-          <span>
-            <FaUser size={30} />
-          </span>
-          <span>{name}</span>
-        </h2>
-        <a href={`tel: +${number}`}>
-          <span>
-            <ImPhoneHangUp size={16} />
-          </span>
-          <span>{number}</span>
-        </a>
+        <div>
+          <h2>
+            <span>
+              <FaRegCircleUser size={30} />
+            </span>
+            <span>{contact.name}</span>
+          </h2>
+          <a href={`tel: +${contact.number}`}>
+            <span>
+              <ImPhone size={16} />
+            </span>
+            <span>{contact.number}</span>
+          </a>
+        </div>
+        <div>
+          <button>
+            <RiEdit2Fill size={18} />
+          </button>
+          <button onClick={onDelete}>
+            <RiDeleteBin6Fill size={18} />
+          </button>
+        </div>
       </div>
-      <div>
-        <button>
-          <RiEdit2Fill size={18} />
-        </button>
-        <button onClick={onDelete}>
-          <RiDeleteBin6Fill size={18} />
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 export default Contact;
