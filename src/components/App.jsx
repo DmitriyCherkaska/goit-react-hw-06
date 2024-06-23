@@ -1,8 +1,8 @@
 // import ContactForm from './components/ContactForm/ContactForm';
-import ContactList from './components/ContactList/ContactList';
-import SearchBox from './components/SearchBox/SearchBox';
+import ContactList from './ContactList/ContactList';
+import SearchBox from './SearchBox/SearchBox';
 import './App.css';
-import Logo from './components/Logo/Logo';
+import Logo from './Logo/Logo';
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import style from './SearchBox.module.css';
 import { changeFilter } from '../../redux/filtersSlice';
 import { selectNameFilter } from '../../redux/selectors';
-import ContactForm from '../ContactForm/ContactForm';
+import ContactForm from '../ContactForm/ContactsForm';
 import { IoPersonAddOutline } from 'react-icons/io5';
 import { useState } from 'react';
 
