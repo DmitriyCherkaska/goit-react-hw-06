@@ -1,10 +1,12 @@
-import css from './TaskCounter.module.css';
+// import css from './TaskCounter.module.css';
 
-export const TaskCounter = () => {
+const SearchBox = () => {
   return (
     <div>
-      <p className={css.text}>Active: 0</p>
-      <p className={css.text}>Completed: 0</p>
+      <p>Active: 0</p>
+      <p>Completed: 0</p>
     </div>
   );
 };
+
+export default SearchBox;
