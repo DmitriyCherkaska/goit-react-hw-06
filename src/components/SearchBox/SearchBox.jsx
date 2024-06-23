@@ -1,5 +1,5 @@
 import style from './SearchBox.module.css';
-import ContactForm from '../ContactForm/ContactsForm';
+import ContactForm from '../ContactForm/ContactForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 import { selectFilter } from '../../redux/selectors';
