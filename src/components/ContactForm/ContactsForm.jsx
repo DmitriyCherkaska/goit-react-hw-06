@@ -46,7 +46,7 @@ const TextMaskCustom = ({ field, ...props }) => (
     showMask
   />
 );
-const ContactForm = ({ setIsFormVisible }) => {
+const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
   const dispatch = useDispatch();
@@ -54,11 +54,9 @@ const ContactForm = ({ setIsFormVisible }) => {
   const handleSubmit = (values, actions) => {
     const newContact = { id: nanoid(), ...values };
     dispatch(addContact(newContact));
-    setIsFormVisible(true);
     actions.resetForm();
   };
   const handleCloseForm = actions => {
-    setIsFormVisible(true);
     actions.resetForm();
   };
   const handleClick = event => {

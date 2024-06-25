@@ -39,7 +39,7 @@ const SearchBox = () => {
           !isFormVisible ? style.visible : ''
         }`}
       >
-        <ContactForm setIsFormVisible={setIsFormVisible} />
+        <ContactForm />
       </div>
     </>
   );
